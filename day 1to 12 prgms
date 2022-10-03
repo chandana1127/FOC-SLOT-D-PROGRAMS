@@ -74,28 +74,21 @@ Odd Numbers between 1 and 5 are :
 
 4)Summing up series 1 + 2 + 3 + 4….. +n
 #include<stdio.h>
-int series(int n);
-int rseries(int n);
-int main( )
-{
- int n;
- printf("Enter number of terms : ");
- scanf("%d", &n);
- printf("\b\b Using Recursion :: \n");
- printf("\b\b = %d\n", series(n)); /* \b to erase last 
-+sign */
- printf("\n\b\b Using Recursion :: \n");
- printf("\b\b = %d\n\n\n", rseries(n));
- return 0;
+int main() {
+	int n,i;
+	int sum=0;
+	printf("Enter the n i.e. max values of series: ");
+	scanf("%d",&n);
+	sum = (n * (n + 1)) / 2;
+	printf("Sum of the series: ");
+	for (i =1;i <= n;i++) {
+		if (i!=n)
+		             printf("%d + ",i); else
+		             printf("%d = %d ",i,sum);
+	}
+	return 0;
 }
-Output:
-Enter number of terms : 15
-Using Recursion ::
-1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 = 
-120
-Using Recursion ::
-1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 = 
-120
+
 
 
 6) Summing up Even Number series 
@@ -219,17 +212,14 @@ int main()
 10)finding whether the given integer is odd or even in c
 #include <stdio.h>
 int main() {
- int num;
- printf("Enter an integer: ");
- scanf("%d", &num);
- (num % 2 == 0) ? printf("%d is even.", num) : printf("%d is 
-odd.", num);
- return 0;
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    
+    (num % 2 == 0) ? printf("%d is even.", num) : printf("%d is odd.", num);
+    return 0;
 }
 
-Output:
-Enter an integer: 5
-5 is odd.
 
 
 11)finding whether integer is positive or negative
