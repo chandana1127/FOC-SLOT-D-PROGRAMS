@@ -91,7 +91,7 @@ int main() {
 
 
 
-6) Summing up Even Number series 
+ 5)summing up Even Number series 
 #include<stdio.h>
 int main()
 {
@@ -162,7 +162,7 @@ long cube_sum_n_natural(int n) {
  long sum = 0;
  int i;
  for (i = 1; i <= n; i++) {
- sum += i * i * i; //cube i and add it with sum
+ sum += i * i * i; 
  }
  return sum;
 }
@@ -248,9 +248,8 @@ int main()
 int n1=0,n2=1,n3,i,number; 
 printf("Enter the number of elements:"); 
 scanf("%d",&number); 
-printf("\n%d %d",n1,n2);//printing 0 and 1 
-for(i=2;i<number;++i)//loop starts from 2 because 0 and 1 are 
-already printed 
+printf("\n%d %d",n1,n2);
+for(i=2;i<number;++i) 
 { 
  n3=n1+n2; 
  printf(" %d",n3); 
