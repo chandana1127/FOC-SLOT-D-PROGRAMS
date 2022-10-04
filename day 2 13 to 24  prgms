@@ -1,0 +1,237 @@
+
+13)factorial of number
+#include<stdio.h> 
+int main() 
+{ 
+int i,fact=1,number; 
+printf("Enter a number: "); 
+ scanf("%d",&number); 
+ for(i=1;i<=number;i++){ 
+ fact=fact*i; 
+ } 
+ printf("Factorial of %d is: %d",number,fact); 
+return 0; 
+} 
+
+
+14)armstrong or not
+
+#include<stdio.h>
+int main(){
+ int number,remainder,total=0,temp;
+ printf("enter the number=");
+ scanf("%d",&number);
+ temp=number;
+ while(number>0){
+ remainder=number%10;
+ total=total+(remainder*remainder*remainder);
+ number=number/10;
+ }
+ if(temp==total)
+ printf("This number is Armstrong number");
+ else
+ printf("This number is not Armstrong number");
+ return 0;
+}
+
+
+
+
+15)sum and average of n numbers
+#include <stdio.h>
+int main()
+{ 
+ int num, sum = 0, n;
+ float avg; 
+ printf("Please Enter term of n number:-");
+ scanf("%d", &n);
+ for(int i = 1; i <= n; i++)
+ {
+ printf("Number %d = ", i);
+ scanf("%d", &num);
+ sum = sum + num;
+ }
+ avg = sum / n;
+ printf("\nThe Sum of n Numbers = %d", sum); 
+ printf("\nThe Average of n Numbers = %.2f\n", avg);
+}
+
+
+16)digits if integer number
+#include <stdio.h>
+int main() { 
+ int number;
+ printf("Enter an integer: "); 
+ scanf("%d", &number);
+ printf("You entered: %d", number);
+ return 0;
+}
+
+
+17)summ of digits of integer
+
+#include <stdio.h>
+int main()
+{
+ int n, t, sum = 0, remainder;
+ printf("Enter an integer\n");
+ scanf("%d", &n);
+ t = n;
+ while (t != 0)
+ {
+ remainder = t % 10;
+ sum = sum + remainder;
+ t = t / 10;
+ }
+ printf("Sum of digits of %d = %d\n", n, sum);
+ return 0;
+}
+
+
+
+18)reverse digits of integer
+
+#include <stdio.h>
+int main() 
+{
+ int n, reverse = 0, remainder;
+ printf("Enter an integer: ");
+ scanf("%d", &n);
+ while (n != 0) {
+ remainder = n % 10;
+ reverse = reverse * 10 + remainder;
+ n /= 10;
+ }
+ printf("Reversed number = %d", reverse);
+ return 0;
+}
+
+
+19)finding positive or negative
+
+#include <stdio.h>
+int main()
+{
+    int num;
+ 
+    printf("Input a number :");
+    scanf("%d", &num);
+    if (num >= 0)
+        printf("%d is a positive number \n", num);
+    else
+        printf("%d is a negative number \n", num);
+}
+
+
+
+20)swapping
+#include<stdio.h>
+int main() 
+{
+ int x, y, temp;
+ printf("Enter the value of x and y: ");
+ scanf("%d %d", &x, &y);
+ printf("Before swapping x=%d, y=%d ", x, y);
+ temp = x;
+ x = y;
+ y = temp;
+ printf("After swapping x=%d, b=%d", x, y);
+ return 0; 
+}
+
+
+21)decimal to hexadeciaml
+#include <stdio.h>
+int main()
+{
+ int decimal_Number = 45;
+ int i = 1, j, temp;
+ char hexa_Number[100];
+ while (decimal_Number != 0) {
+ int ch = decimal_Number / 16;
+ int r = ch * 16;
+ temp = decimal_Number - r;
+ if (temp < 10)
+ temp = temp + 48;
+ else
+ temp = temp + 55;
+ hexa_Number[i++] = temp;
+ decimal_Number = decimal_Number / 16;
+ }
+ printf("Hexadecimal value is: ");
+ for (j = i - 1; j > 0; j--)
+ printf("%c", hexa_Number[j]);
+ return 0;
+}
+
+22)hexa to decimal
+
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+ char hex[17];
+ long long decimal, place;
+ int i = 0, val, len;
+ decimal = 0;
+ place = 1;
+ printf("Enter any hexadecimal number: ");
+ gets(hex);
+ len = strlen(hex);
+ len--;
+ for(i=0; hex[i]!='\0'; i++)
+ {
+ if(hex[i]>='0' && hex[i]<='9')
+ {
+ val = hex[i] - 48;
+ }
+ else if(hex[i]>='a' && hex[i]<='f')
+ {
+ val = hex[i] - 97 + 10;
+ }
+ else if(hex[i]>='A' && hex[i]<='F')
+ {
+ val = hex[i] - 65 + 10;
+ }
+ decimal += val * pow(16, len);
+ len--;
+ }
+ printf("Hexadecimal number = %s\n", hex);
+ printf("Decimal number = %lld", decimal);
+ return 0;
+}
+
+
+
+23)decimal to oc tal
+#include <stdio.h>
+int main() 
+{
+ int number;
+ printf("\n Please Enter the Number You want to Convert : ");
+ scanf("%d", &number);
+ printf("\n Octal Number of a Given Number = %o", number);
+ return 0;
+}
+
+
+24)octal to decimal
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+ int octal, decimal = 0;
+ int i = 0;
+ printf("Enter the Octal Number = ");
+ scanf("%d",&octal);
+ while(octal != 0)
+ {
+ decimal = decimal + (octal % 10) * pow(8, i++);
+ octal = octal / 10;
+ }
+ printf("The Decimal Value = %d\n", decimal); 
+ return 0;
+}
+
